@@ -2,16 +2,16 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
    "contentVersion": "1.0.0.0",
    "parameters": {
-      "adminUsername": {
+	 "adminUserName": {
       "type": "string",
       "metadata": {
-          "description": "An existing VM user with root level access"
+        "description": "This is the the username you wish to assign to your VMs admin account"
       }
     },
     "adminPassword": {
       "type": "securestring",
       "metadata": {
-          "description": "that users password"
+        "description": "This is the the password you wish to assign to your VMs admin account"
       }
     },
     "location": {
@@ -159,10 +159,11 @@
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
-        "osProfile": {
+		"osProfile": {
+          "computerName": "[variables('vmName')]",
           "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]",
-        },
+          "adminPassword": "[parameters('adminPassword')]"
+		},
         "storageProfile": {
           "osDisk": {
             "name": "[concat(parameters('vmName'))]",
