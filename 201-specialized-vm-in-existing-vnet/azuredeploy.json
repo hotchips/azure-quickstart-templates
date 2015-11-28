@@ -2,7 +2,19 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
    "contentVersion": "1.0.0.0",
    "parameters": {
-     "location": {
+      "adminUsername": {
+      "type": "string",
+      "metadata": {
+          "description": "An existing VM user with root level access"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+          "description": "that users password"
+      }
+    },
+    "location": {
        "type": "string",
        "metadata": {
          "description": "Please enter the location where you want to deploy this VM"
@@ -147,6 +159,10 @@
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
+        "osProfile": {
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]",
+        }
         "storageProfile": {
           "osDisk": {
             "name": "[concat(parameters('vmName'))]",
