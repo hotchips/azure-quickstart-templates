@@ -13,7 +13,7 @@
             "value": "yourvnet"
         },
         "existingVirtualNetworkResourceGroup": {
-            "value": "red-resource-group"
+            "value": "yourresourcegroup"
         },
         "subnetName": {
             "value": "VNETsubnetName"
