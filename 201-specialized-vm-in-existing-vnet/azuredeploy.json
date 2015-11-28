@@ -171,8 +171,8 @@
             "vhd": {
               "uri": "[parameters('osDiskVhdUri')]"
             },
-            "createOption": "Attach",
-          }
+            "createOption": "Attach"
+          },
           "dataDisks": [
             {
             "lun": "0",
