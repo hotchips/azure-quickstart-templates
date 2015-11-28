@@ -162,7 +162,7 @@
         "osProfile": {
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]",
-        }
+        },
         "storageProfile": {
           "osDisk": {
             "name": "[concat(parameters('vmName'))]",
