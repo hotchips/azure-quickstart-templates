@@ -4,7 +4,7 @@
     "parameters": {
     
         "location": {
-            "value": "West US"
+            "value": "Australia East"
         },
         "dnsNameForPublicIP": {
             "value": "youruniquename"
@@ -13,7 +13,7 @@
             "value": "yourvnet"
         },
         "existingVirtualNetworkResourceGroup": {
-            "value": "VNETresourceGroup"
+            "value": "red-resource-group"
         },
         "subnetName": {
             "value": "VNETsubnetName"
@@ -22,15 +22,24 @@
         "osDiskVhdUri": {
             "value": "customvhdlocation"
         },
+        "dataDiskVhdUri1": {
+            "value": "customvhdlocation1"
+        },
+        "dataDiskVhdUri2": {
+            "value": "customvhdlocation2"
+        },
+        "dataDiskVhdUri3": {
+            "value": "customvhdlocation3"
+        },
         "vmName": {
           "value": "NameOfVM"
         },
 
         "osType": {
-            "value": "Windows"
+            "value": "Linux"
         },
         "vmSize": {
-            "value": "Standard_DS1"
+            "value": "Standard_D2"
         }
     }
 }
