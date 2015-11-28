@@ -30,6 +30,24 @@
           "description": "Uri of the existing VHD in ARM standard or premium storage"
       }
     },
+    "dataDiskVhdUri1": {
+     "type": "string",
+        "metadata": {
+          "description": "Uri of the existing data1 VHD in ARM standard or premium storage"
+      }
+    },
+    "dataDiskVhdUri2": {
+     "type": "string",
+        "metadata": {
+          "description": "Uri of the existing data2 VHD in ARM standard or premium storage"
+      }
+    },
+    "dataDiskVhdUri3": {
+     "type": "string",
+        "metadata": {
+          "description": "Uri of the existing data3 VHD in ARM standard or premium storage"
+      }
+    },
     "vmSize": {
       "type": "string",
       "metadata": {
@@ -139,6 +157,14 @@
             },
             "createOption": "Attach"
           }
+          "lun": 0,
+                    "name": "[parameters('dataDiskName1')]",
+                    "createOption": "Attach",
+                    "vhd": {
+                        "uri": "[parameters('dataDiskVhdUri1')]"
+                    },
+                    "caching": "ReadWrite"
+                }
         },
         "networkProfile": {
           "networkInterfaces": [
