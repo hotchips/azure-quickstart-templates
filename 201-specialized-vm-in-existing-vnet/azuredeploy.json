@@ -173,23 +173,27 @@
             },
             "createOption": "Attach"
           }
-          "lun": "0",
-                    "name": "DataDisk1",
-                    "createOption": "Attach",
-                    "vhd": {
-                        "uri": "[parameters('dataDiskVhdUri1')]"
-                    },
-                    "caching": "ReadWrite"
-                }
-          "lun": "1",
+          "dataDisks": [
+            {
+            "lun": "0",
+                "name": "DataDisk1",
+                "createOption": "Attach",
+                "vhd": {
+                    "uri": "[parameters('dataDiskVhdUri1')]"
+                },
+                "caching": "ReadWrite"
+            },
+            {    
+            "lun": "1",
                     "name": "DataDisk2",
                     "createOption": "Attach",
                     "vhd": {
                         "uri": "[parameters('dataDiskVhdUri2')]"
                     },
                     "caching": "ReadWrite"
-                }
-          "lun": "2",
+            },
+            {
+            "lun": "2",
                     "name": "DataDisk3",
                     "createOption": "Attach",
                     "vhd": {
@@ -197,6 +201,7 @@
                     },
                     "caching": "ReadWrite"
                 }
+              ]
         },
         "networkProfile": {
           "networkInterfaces": [
