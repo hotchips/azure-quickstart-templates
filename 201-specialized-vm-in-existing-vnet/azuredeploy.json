@@ -200,7 +200,7 @@
                         "uri": "[parameters('dataDiskVhdUri3')]"
                     },
                     "caching": "ReadWrite"
-                },
+             }
               ]
         },
         "networkProfile": {
