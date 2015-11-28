@@ -173,7 +173,7 @@
             },
             "createOption": "Attach"
           }
-          "lun": 0,
+          "lun": "0",
                     "name": "DataDisk1",
                     "createOption": "Attach",
                     "vhd": {
@@ -181,7 +181,7 @@
                     },
                     "caching": "ReadWrite"
                 }
-          "lun": 1,
+          "lun": "1",
                     "name": "DataDisk2",
                     "createOption": "Attach",
                     "vhd": {
@@ -189,7 +189,7 @@
                     },
                     "caching": "ReadWrite"
                 }
-          "lun": 2,
+          "lun": "2",
                     "name": "DataDisk3",
                     "createOption": "Attach",
                     "vhd": {
